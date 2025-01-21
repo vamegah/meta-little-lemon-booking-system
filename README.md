@@ -446,8 +446,8 @@ Note: Make sure you have installed MySQL on your local machine and set up the ad
 
 This is part three of the final assessment and it deals with utilizing JavaScript functionalities. It will include changes in the view logic and the booking template created for processing the booking form data. 
 
-Steps
-Step 1:
+### Steps
+## Step 1:
 
 Run the following command to activate the virtual environment:
 
@@ -455,7 +455,7 @@ pipenv shell
 
 Note: Make sure you run the command in the main working directory containing the manage.py file. 
 
-Step 2:
+## Step 2:
 
 To make sure you have the necessary dependencies in place, run the following commands inside pipenv:
 
@@ -463,11 +463,11 @@ pipenv install django
 
 pipenv install mysqlclient
 
- Step 3: 
+ ## Step 3: 
 
 Make sure you check the code inside all the supporting files you will need for the exercise. It includes a few changes from the endpoint of part two. 
 
-Step 4:  
+## Step 4:  
 
 In the terminal run both commands to perform the migrations.
 
@@ -477,13 +477,13 @@ Run the necessary commands to make sure the user is created and can access the d
 
 Note: The migrations performed here are not necessary as the changes are already in place. It is however a good practice to perform migrations before you begin working on a new code block.  
 
-Step 5:
+## Step 5:
 
 Open the file views.py and create a view function called bookings() below the @csrf_exempt decorator. Pass a request object to it as an argument. 
 
 Note: The necessary imports are already added inside the views.py file. URL configurations are already in place at the app-level urls.py file for the view function.
 
-Step 6:  
+## Step 6:  
 
 Inside the view function bookings(), add the following pseudo code:
 
@@ -537,11 +537,11 @@ booking_json
 
 Variable content_type with the value equal to 'application/json'
 
-Step 7:
+## Step 7:
 
 Save the views.py file and ensure the code has no errors and that you have followed the pseudo-code accurately. 
 
-Step 8:
+## Step 8:
 
 Now step inside the book.html file and observe the code. There are three code blocks that you need to complete marked inside comments like:
 
@@ -549,7 +549,7 @@ Now step inside the book.html file and observe the code. There are three code bl
 
  You will be replacing the comments with the pseudo-code as specified in following four steps below.
 
-Step 9 (for part one):
+## Step 9 (for part one):
 
 Observe the code added inside the paragraph tag for the first name and replicate the code for the reservation date to replace the code block.  
 
@@ -563,7 +563,7 @@ Continue on the same block of code and call the function addEventListener() on i
 
 function that contains the code: {getBookings()}
 
-Step 11 (for part three):
+## Step 11 (for part three):
 
 Run a for loop on the constant data. Use a temporary variable called item to run the loop. Add the code inside the curly braces as follows:
 
@@ -575,7 +575,7 @@ Call a push() function over reserved_slots array and pass the item.fields.reserv
 
  `<p>${item.fields.first_name} - ${formatTime(item.fields.reservation_slot)}</p>`
 
-Step 12 (for part four):
+## Step 12 (for part four):
 
 Create a variable called slot_options and assign the following string to it:
 
@@ -595,13 +595,13 @@ Else, add the code:
 
 Note: Make sure all the code blocks have appropriate curly braces where necessary.
 
-Step 13:
+## Step 13:
 
 Save the file and make sure there are no visible errors inside your HTML file. 
 
 Now open the Terminal inside VS Code and add a command to run the server and go to the localhost URL and observe the web page. 
 
-Step 14:
+## Step 14:
 
 Enter your name in the text box and select a date and time of your choice to create a reservation. 
 
@@ -610,16 +610,16 @@ The screen should appear similar to the screen below:
  
 
 Form for making reservations with name, reservation date and time fields and booking entries present
-Step 15:
+## Step 15:
 
 After selecting the options and pressing the Reserve Now button, you should be able to see the screen updated with your details. Note the times selected earlier are not available for selection.
 
 Form displaying drop down option for selecting reservation time.
-Step 16:
+## Step 16:
 
 Note the change in the content displayed on the screen as per the change in the date selected:
 
 Form with fields for reservation and form entries present for a different date.
-Step 17:
+## Step 17:
 
 Open the MySQL database and observe the entries updated in line with the changes in the reservations performed inside the template.
